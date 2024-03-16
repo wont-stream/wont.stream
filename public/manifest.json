@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
   "name": "Unstream's Website",
   "short_name": "Unstream's Website",
-  "start_url": ".",
+  "start_url": "https://wont.stream/",
   "display": "standalone",
   "background_color": "#fff",
   "description": "A Qwik project app."
