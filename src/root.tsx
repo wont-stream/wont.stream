@@ -6,7 +6,7 @@ import {
 } from "@builder.io/qwik-city";
 import { RouterHead } from "./components/router-head/router-head";
 
-import "./global.css";
+import "./sakura/scss/sakura-dark.scss";
 
 export default component$(() => {
   /**

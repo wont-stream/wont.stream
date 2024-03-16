@@ -1,4 +1,8 @@
+@echo off
+
 pnpm run build
+
+clear
 
 cd dist
 
@@ -9,6 +13,12 @@ git branch -M main
 git remote add origin https://github.com/wont-stream/wont-stream.github.io.git
 git push -u origin main --force
 
+clear
+
 cd ..
 
-del dist
+"C:\Users\unstream\Documents\nmuidi.exe" dist
+
+clear
+
+C:\Users\unstream\AppData\Local\Microsoft\WindowsApps\Microsoft.PowerShellPreview_8wekyb3d8bbwe\pwsh-preview.exe
