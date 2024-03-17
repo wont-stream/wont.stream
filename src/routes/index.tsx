@@ -8,8 +8,8 @@ export default component$(() => {
 
   const content = [
     (<><h1><LuCast style={{ width: "100", height: "100" }} /><br />Unstream</h1>
-    <p>A self taught fullstack developer.</p>
-    <p><a href="https://github.com/wont-stream"><LuGithub /></a></p></>), (<><h1>Me:</h1><CatImg /></>)
+      <p>A self taught fullstack developer.</p>
+      <p><a href="https://github.com/wont-stream" aria-label="GitHub"><LuGithub /></a></p></>), (<><h1>Me:</h1><CatImg /></>)
   ]
   const cat = useSignal(false)
 
