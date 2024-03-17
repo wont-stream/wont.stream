@@ -13,6 +13,7 @@ export default extendConfig(baseConfig, () => {
     plugins: [
       staticAdapter({
         origin: "https://wont.stream",
+        base: "https://example.com/world/"
       }),
     ],
   };
