@@ -2,32 +2,23 @@ import { $, component$, useSignal } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
 import { LuCast, LuGithub } from "@qwikest/icons/lucide";
-import CatImg from "../IMG_1102.webp?jsx"
+import BackgroundImg from "../background.png?jsx"
 
 export default component$(() => {
-  const cat = useSignal(false)
-
-  const content = [
-    (<>
-      <h1><LuCast style={{ width: "100", height: "100" }} /><br />Unstream</h1>
-      <p>A self taught fullstack developer.</p>
-      <p><a href="https://github.com/wont-stream" aria-label="GitHub"><LuGithub /></a></p>
-    </>), (<><h1>Me:</h1><CatImg /></>)
-  ]
-
-  const catFunc = $(() => {
-    if (cat.value) {
-      cat.value = false
-    } else {
-      cat.value = true
+  const imgStyle = useSignal({})
+  const imgLoad = $(() => {
+    imgStyle.value = {
+      animation: "fadeIn 1s"
     }
   })
 
   return (
     <>
-      <div class="center">
-        {content[cat.value == false ? 0 : 1]}
-        <p><button onClick$={catFunc}>Click me</button></p>
+      <BackgroundImg id="bg" onLoad$={imgLoad} style={imgStyle.value} />
+      <div class="center" style={imgStyle.value}>
+      <h1><LuCast style={{ width: "100", height: "100" }} /><br />Unstream</h1>
+      <p>A self taught fullstack developer.</p>
+      <p><a href="https://github.com/wont-stream" aria-label="GitHub"><LuGithub /></a></p>
       </div>
     </>
   );
