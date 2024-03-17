@@ -24,7 +24,6 @@ export default component$(() => {
       <div class="center" style={imgStyle.value}>
       <h1><LuCast style={{ width: "100", height: "100" }} /><br />Unstream</h1>
       <p>A self taught fullstack developer.</p>
-      <p>{pageSize.value.width}x{pageSize.value.height}</p>
       <p><a href="https://github.com/wont-stream" aria-label="GitHub"><LuGithub /></a></p>
       </div>
     </>
