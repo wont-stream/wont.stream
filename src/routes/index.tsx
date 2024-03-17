@@ -23,7 +23,7 @@ export default component$(() => {
   return (
     <>
       <img src={imgURL.value} decoding="async" loading="lazy" id="bg" onLoad$={imgLoad} onError$={imgLoad} style={imgStyle.value} width={pageSize.value.width} height={pageSize.value.height}></img>
-      <div class="center" style={imgStyle.value}>
+      <div class="center">
         <h1><LuCast style={{ width: "100", height: "100" }} /><br />Unstream</h1>
         <p>A self taught fullstack developer.</p>
         <p><a href="https://github.com/wont-stream" aria-label="GitHub"><LuGithub /></a></p>
