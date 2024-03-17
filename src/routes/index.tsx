@@ -5,10 +5,11 @@ import { LuCast, LuGithub } from "@qwikest/icons/lucide";
 import BackgroundImg from "../background.png?jsx"
 
 export default component$(() => {
-  const imgStyle = useSignal({})
+  const imgStyle = useSignal({opacity: "0", animation: ""})
   const imgLoad = $(() => {
     imgStyle.value = {
-      animation: "fadeIn 1s"
+      animation: "fadeIn 1s",
+      opacity: ""
     }
   })
 
