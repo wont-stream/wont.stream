@@ -1,17 +1,19 @@
-import { $, component$, useSignal } from "@builder.io/qwik";
+import { $, component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
 import { LuCast, LuGithub } from "@qwikest/icons/lucide";
 import CatImg from "../IMG_1102.webp?jsx"
 
 export default component$(() => {
+  const cat = useSignal(false)
 
   const content = [
-    (<><h1><LuCast style={{ width: "100", height: "100" }} /><br />Unstream</h1>
+    (<>
+      <h1><LuCast style={{ width: "100", height: "100" }} /><br />Unstream</h1>
       <p>A self taught fullstack developer.</p>
-      <p><a href="https://github.com/wont-stream" aria-label="GitHub"><LuGithub /></a></p></>), (<><h1>Me:</h1><CatImg /></>)
+      <p><a href="https://github.com/wont-stream" aria-label="GitHub"><LuGithub /></a></p>
+    </>), (<><h1>Me:</h1><CatImg /></>)
   ]
-  const cat = useSignal(false)
 
   const catFunc = $(() => {
     if (cat.value) {
@@ -20,6 +22,7 @@ export default component$(() => {
       cat.value = true
     }
   })
+
   return (
     <>
       <div class="center">
